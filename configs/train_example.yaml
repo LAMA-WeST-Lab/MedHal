@@ -1,0 +1,40 @@
+# Example training config for `python -m scripts.training.train_med_hal <config.yaml>`.
+# Replace the placeholder paths with your own. `$VAR` environment variables are expanded.
+checkpoint_config:
+  model_checkpoint: "/path/to/base/model"
+  load_in_4bit: false
+  load_in_8bit: false
+  max_seq_len: 8192
+  dtype: null
+  trust_remote_code: true
+
+data_config:
+  dataset_path: "/path/to/medhal_lf_bal_train_val"
+  train_split: "train"
+  val_split: "val"
+  test_split: "test"
+
+training_config:
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 4
+  logging_steps: 100
+  num_train_epochs: 1
+  max_steps: -1
+  save_steps: 1000
+  eval_steps: 1000
+  learning_rate: 0.0002
+  optim: "adamw"
+  weight_decay: 0.01
+  lr_scheduler_type: "linear"
+  seed: 42
+  output_dir: "./outputs/medhal"
+  use_lora: true
+  r: 64
+  lora_alpha: 16
+  lora_dropout: 0.0
+  bias: "none"
+  use_gradient_checkpointing: true
+  random_state: 42
+  use_rslora: false
+  loftq_bits: null

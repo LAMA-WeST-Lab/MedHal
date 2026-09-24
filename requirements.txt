@@ -1,0 +1,33 @@
+# Core dependencies
+# Pins are load-bearing and verified with a fresh `uv pip install` + import
+# suite (2026-09-18): trl 0.12.x is the last line with the
+# DataCollatorForCompletionOnlyLM/SFTConfig API used by MedHalTrainer;
+# transformers 5.x drags torch up and forces the resolver onto the
+# unbuildable vllm==0.2.5, so transformers stays <5 and vllm is pinned.
+torch
+transformers<5
+datasets
+accelerate
+vllm==0.11.0
+trl==0.12.*
+peft
+nltk
+scikit-learn
+numpy
+pandas
+pyyaml
+tqdm
+bitsandbytes
+
+# Evaluation / scoring
+sentence-transformers
+matplotlib
+
+# Optional: alternative trainers and inference backends
+# unsloth            # required by scripts/training/train_umed_hal.py
+# deepspeed          # required by scripts/training/train_med_hal_deepspeed.py
+# flash-attn         # optional attention backend used by run_sft.py configs
+# openai             # required by OpenAIDatasetInferencePipeline
+# together           # required by TogetherAIDatasetInferencePipeline
+# requests           # required by VLLMEndpointDatasetInferencePipeline
+# wandb              # optional experiment logging
