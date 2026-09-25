@@ -8,10 +8,19 @@ Source datasets: MedQA, MedMCQA, SumPubMed, MedNLI, Augmented Clinical Notes.
 
 Released MedHal datasets on Hugging Face:
 
-- [GM07/medhal](https://huggingface.co/datasets/GM07/medhal): raw, unfiltered, unbalanced (~800k samples)
-- [GM07/medhal-lf](https://huggingface.co/datasets/GM07/medhal-lf): length-filtered (context + statement < 30000 characters, fits an 8192-token window)
-- [GM07/medhal-lf-bal](https://huggingface.co/datasets/GM07/medhal-lf-bal): length-filtered and task-balanced, with `train`/`val`/`test` splits (use this for training)
+- [LAMA-WeST/medhal-raw](https://huggingface.co/datasets/LAMA-WeST/medhal-raw): raw, unfiltered, unbalanced (~800k samples)
+- [GM07/medhal-lf](): length-filtered (context + statement < 30000 characters, fits an 8192-token window)
+- [LAMA-WeST/medhal-lf_qafil_bal](https://huggingface.co/datasets/LAMA-WeST/medhal-lf_qafil_bal): length-filtered, qa-filtered and task-balanced, with `train`/`val`/`test` splits (use this for training)
 
+## Trained Models
+
+Released MedHal trained models on Hugging Face:
+
+- [medhal-llama3-8b](https://huggingface.co/LAMA-WeST/medhal-llama3-8b)
+- [medhal-openbiollm-8b](https://huggingface.co/LAMA-WeST/medhal-openbiollm-8b)
+- [medhal-medllama3-8b](https://huggingface.co/LAMA-WeST/medhal-medllama3-8b)
+- [medhal-halloumi-8b](https://huggingface.co/LAMA-WeST/medhal-halloumi-8b)
+- [medhal-qwen3-8b](https://huggingface.co/LAMA-WeST/medhal-qwen3-8b)
 
 ## Setup
 
