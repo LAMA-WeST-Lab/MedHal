@@ -9,7 +9,6 @@ Source datasets: MedQA, MedMCQA, SumPubMed, MedNLI, Augmented Clinical Notes.
 Released MedHal datasets on Hugging Face:
 
 - [LAMA-WeST/medhal-raw](https://huggingface.co/datasets/LAMA-WeST/medhal-raw): raw, unfiltered, unbalanced (~800k samples)
-- [GM07/medhal-lf](): length-filtered (context + statement < 30000 characters, fits an 8192-token window)
 - [LAMA-WeST/medhal-lf_qafil_bal](https://huggingface.co/datasets/LAMA-WeST/medhal-lf_qafil_bal): length-filtered, qa-filtered and task-balanced, with `train`/`val`/`test` splits (use this for training)
 
 ## Trained Models
